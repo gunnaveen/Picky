@@ -8,39 +8,78 @@
         <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
         
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-light_blue.min.css">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css">
         <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
         <style>
-                body
-                {
-                    color: purple;
-                    font-family: verdana;
+                body {
+                    color: black;
+                    font-family: "Lato", sans-serif;
                     text-align: center;
-                } 
+                }   
+
+        ul.tab {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 1 solid #ccc;
+                background-color: white;
+        }   
+
+        ul.tab li {float: left;}
+
+        ul.tab li a { 
+
+                display: inline-block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                transition: 0.3s;
+                font-size: 17px;
+        }   
+
+        ul.tab li a:hover {
+                background-color: #ddd;
+        }   
+
+        ul.tab li a:focus, .active {
+                background-color: #ccc;
+        }
+            
+        .tabcontent {
+                display: none;
+                padding: 6px 12px;
+                border: 1px solid #ccc;
+                border-top: none;
+        }
+
+        .topright {
+                float: right;
+                cursor: pointer;
+                font-size: 20px;
+        }
+
+        .topright:hover {color: red;}
+
         </style>
-        
-        
-        
+        <body>
+
+
         <script type="text/javascript" charset="utf-8" src="phonegap-1.4.1.js"></script>
 
         <script type="text/javascript">
 
-            document.addEventListener("deviceready",onDeviceReady,false);
-    
-            function onDeviceReady()
-            {
-                    document.getElementById("welcomeMsg").innerHTML += "Welcome!";
-    
-            }
-    
-            function randomize(choices)
-            {
+        document.body.style.backgroundColor = "#18FFFF";
+        
+        function randomize(choices)
+        {
 
-                var result = choices[Math.floor(Math.random()*choices.length)];
-                return result;
+        var result = choices[Math.floor(Math.random()*choices.length)];
+        return result;
 
-            }
+        }
 
         function multInputs()
         {
@@ -58,40 +97,90 @@
                 }
                 
                 i--;
-        
+            
                 }
                     
                 document.getElementById("inputs").innerHTML = randomize(choices);
         }
-        
+
         function rollDie()
         {
-
-            var dieNums = [1, 2, 3, 4, 5, 6];
-            document.getElementById("inputs2").innerHTML = randomize(dieNums);
+                var dieNums = [1, 2, 3, 4, 5, 6];
+                document.getElementById("inputs2").innerHTML = randomize(dieNums);
 
         }
-        
+
         function flipCoin()
         {
+        
             var sides = ["Heads", "Tails"];
             document.getElementById("inputs3").innerHTML = randomize(sides);
+        
         }
 
+        function tabs(evt, tabName) {
+
+                var counter, tabcontent, tablinks;
+
+                tabcontent = document.getElementsByClassName("tabcontent");
+
+                for (counter = 0; counter < tabcontent.length; counter++) {
+
+                        tabcontent[counter].style.display = "none";
+
+                }
+
+                tablinks = document.getElementsByClassName("tablinks");
+                
+                for (counter = 0; counter < tablinks.length; counter++) {
+
+                        tablinks[counter].className = tablinks[counter].className.replace(" active", "");
+
+                }
+
+                document.getElementsById(tabName).style.display = "block";
+                evt.currentTarget.className += " active";
+        }
+
+                document.getElementById("defaultOpen").click();
+            
+            
         </script>
 
     </head>
     <body>
-        <h1>Picky</h1>
-        <div id="welcomeMsg"></div>
 
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location.href='decisions.html'">Make a Choice!</button>
-        <p>Result: <p id="inputs"></p>
+        <ul class="tab">
+                <li><a href="javascript:void(0)" class="tablinks" onclick="tabs(event, 'Home')" id="defaultOpen">Home</a></li>
+                <li><a href="javascript:void(0)" class="tablinks" onclick="tabs(event, 'About')">About</a></li>
+        </ul>
 
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="rollDie()">Roll a Die!</button>
-        <p>Result: <p id="inputs2"></p>
-        
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="flipCoin()">Flip a Coin!</button>
-        <p>Result: <p id="inputs3"></p>
+        <div id="Home" class="tabcontent">
+                <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+                <h3>Home</h3>
+                <p>GO BACK TO HOME!</p>
+        </div>
+
+        <div id="About" class="tabcontent">
+                <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+                <h3>About</h3>
+                <p>GEORGE PARK, NAVEEN GUNDAVARAPU</p>
+        </div>
+
+        <h1>Picky!</h1>
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="multInputs()">Make a Choice</button>
+        <p id="inputs"></p>
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="flipCoin()">Flip a Coin</button>
+        <p id="inputs3"></p>
+
+
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="rollDie()">Roll a Die</button>
+        <p id="inputs2"></p>
 
         <script type="text/javascript" src="cordova.js"></script>
+
+
+    </body>
+</html>
