@@ -28,6 +28,16 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+//Treats enter in text box as a button click
+document.getElementById("myInput").addEventListener("keyup", function(event) 
+    {
+        event.preventDefault();
+        if (event.keyCode == 13) 
+        {
+            document.getElementByClassName("addBtn").click();
+        }
+    });
+
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
