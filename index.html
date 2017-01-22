@@ -55,14 +55,6 @@
                 border-top: none;
         }
 
-        .topright {
-                float: right;
-                cursor: pointer;
-                font-size: 20px;
-        }
-
-        .topright:hover {color: red;}
-
         </style>
         <body>
 
@@ -97,7 +89,7 @@
                 }
                 
                 i--;
-            
+        
                 }
                     
                 document.getElementById("inputs").innerHTML = randomize(choices);
@@ -118,33 +110,6 @@
         
         }
 
-        function tabs(evt, tabName) {
-
-                var counter, tabcontent, tablinks;
-
-                tabcontent = document.getElementsByClassName("tabcontent");
-
-                for (counter = 0; counter < tabcontent.length; counter++) {
-
-                        tabcontent[counter].style.display = "none";
-
-                }
-
-                tablinks = document.getElementsByClassName("tablinks");
-                
-                for (counter = 0; counter < tablinks.length; counter++) {
-
-                        tablinks[counter].className = tablinks[counter].className.replace(" active", "");
-
-                }
-
-                document.getElementsById(tabName).style.display = "block";
-                evt.currentTarget.className += " active";
-        }
-
-                document.getElementById("defaultOpen").click();
-            
-            
         </script>
 
     </head>
@@ -154,18 +119,6 @@
                 <li><a href="javascript:void(0)" class="tablinks" onclick="tabs(event, 'Home')" id="defaultOpen">Home</a></li>
                 <li><a href="javascript:void(0)" class="tablinks" onclick="tabs(event, 'About')">About</a></li>
         </ul>
-
-        <div id="Home" class="tabcontent">
-                <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
-                <h3>Home</h3>
-                <p>GO BACK TO HOME!</p>
-        </div>
-
-        <div id="About" class="tabcontent">
-                <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
-                <h3>About</h3>
-                <p>GEORGE PARK, NAVEEN GUNDAVARAPU</p>
-        </div>
 
         <h1>Picky!</h1>
 
