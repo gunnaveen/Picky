@@ -1,6 +1,7 @@
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
+var choices = [];
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -31,6 +32,7 @@ list.addEventListener('click', function(ev) {
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
+  choices.push(inputValue);
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -53,3 +55,16 @@ function newElement() {
     }
   }
 }
+
+function multFunc()
+{
+        document.getElementById("inputs").innerHTML = randomize(choices);
+}
+
+function randomize(choices)
+        {
+
+        var result = choices[Math.floor(Math.random()*choices.length)];
+        return result;
+
+        }

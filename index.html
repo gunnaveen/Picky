@@ -73,27 +73,7 @@
 
         }
 
-        function multInputs()
-        {
-        
-        var i = prompt("How many choices do you want to input?");
-        var choices = [];
-        var input;
-        while(i > 0)
-        {
-                input = prompt("Please enter a choice: ");
-                
-                if (input != null)
-                {
-                        choices.push(input);
-                }
-                
-                i--;
-        
-                }
-                    
-                document.getElementById("inputs").innerHTML = randomize(choices);
-        }
+       
 
         function rollDie()
         {
@@ -123,7 +103,7 @@
         <h1>Picky!</h1>
 
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="window.location.href='decisions.html'">Make a Choice</button>
-        <p id="inputs"></p>
+        
 
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="flipCoin()">Flip a Coin</button>
         <p id="inputs3"></p>
