@@ -3,7 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Picky</title>
+        
+        <ul class="tab">
+                <li><a href="javascript:void(0)" onclick="window.location.href='index.html'">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="window.location.href='about.html'">About</a></li>
+        </ul>
+        
+        <title>Home</title>
 
         <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
         
@@ -23,7 +29,7 @@
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                border: 1 solid #ccc;
+                border: 1px solid #ccc;
                 background-color: white;
         }   
 
@@ -42,7 +48,7 @@
 
         ul.tab li a:hover {
                 background-color: #ddd;
-        }   
+        }
 
         ul.tab li a:focus, .active {
                 background-color: #ccc;
@@ -56,6 +62,7 @@
         }
 
         </style>
+        
         <body>
 
 
@@ -114,11 +121,6 @@
 
     </head>
     <body>
-
-        <ul class="tab">
-                <li><a href="javascript:void(0)" class="tablinks" onclick="tabs(event, 'Home')" id="defaultOpen">Home</a></li>
-                <li><a href="javascript:void(0)" class="tablinks" onclick="tabs(event, 'About')">About</a></li>
-        </ul>
 
         <h1>Picky!</h1>
 
