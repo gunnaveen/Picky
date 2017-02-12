@@ -1,10 +1,17 @@
 body {
-            color: black;
-            font-family: "Lato", sans-serif;
-            text-align: center;
-}   
+        color: black;
+        font-family: "Lato", sans-serif;
+        text-align: center;
+} 
+
+.Title {
+  font: 400 100px/1.7 'Merienda One', Helvetica, sans-serif;
+  color: black;
+}
+
 
 ul.tab {
+        color: white;
         list-style-type: none;
         margin: 0;
         padding: 0;
