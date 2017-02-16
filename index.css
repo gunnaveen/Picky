@@ -5,11 +5,22 @@ body {
 } 
 
 .Title {
-  font: 400 100px/1.7 'Merienda One', Helvetica, sans-serif;
-  color: black;
+        font: 400 100px/1.7 'Merienda One', Helvetica, sans-serif;
+        color: black;
 }
 
+.result {
+        color: black;
+        font-family: 'Sofia';
+        font-size: 50px;
+}
 
+.resultTitle {
+        font-family: 'Aldrich';
+        font-weight: bold;
+        color: darkgreen;
+        font-size: 20px;
+}
 ul.tab {
         color: white;
         list-style-type: none;
