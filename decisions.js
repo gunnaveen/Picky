@@ -28,13 +28,14 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
-//Treats enter in text box as a button click
+// Treats enter in text box as a button click
 document.getElementById("myInput").addEventListener("keyup", function(event) 
     {
         event.preventDefault();
         if (event.keyCode == 13) 
         {
-            document.getElementByClassName("addBtn").click();
+            //document.getElementByClassName("addBtn").click();
+            //newElement();
         }
     });
 
@@ -72,9 +73,14 @@ function multFunc()
 }
 
 function randomize(choices)
+{
+            
+        if(choices.length == 0)
         {
-
+            return "Add some choices first!"
+        }
+    
         var result = choices[Math.floor(Math.random()*choices.length)];
         return result;
 
-        }
+}

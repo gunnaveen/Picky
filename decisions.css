@@ -56,6 +56,22 @@ ul li.checked::before {
     width: 7px;
 }
 
+
+.resultTitle {
+        font-family: 'Aldrich';
+        font-weight: bold;
+        color: darkgreen;
+        font-size: 20px;
+        text-align: center;
+}
+
+.inputs {
+        color: black;
+        font-size: 50px;
+        text-align: center;
+        font-family: 'Lobster', cursive;
+}
+
 /* Style the close button */
 .close {
     position: absolute;
@@ -71,7 +87,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-    background-color: #f44336;
+    background-color: #f44336; 
     padding: 30px 40px;
     color: white;
     text-align: center;
@@ -88,6 +104,7 @@ ul li.checked::before {
 input {
     border: none;
     width: 75%;
+    height: 40px;
     padding: 10px;
     float: left;
     font-size: 16px;
@@ -97,6 +114,7 @@ input {
 .addBtn {
     padding: 10px;
     width: 25%;
+    height: 40px;
     background: #d9d9d9;
     color: #555;
     float: left;
