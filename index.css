@@ -35,7 +35,7 @@ body {
         color: darkgreen;
         font-size: 20px;
 }
-/*
+
 ul.tab {
         color: white;
         list-style-type: none;
@@ -58,7 +58,6 @@ ul.tab li a {
         transition: 0.3s;
         font-size: 17px;
 }
-*/
 ul.tab li a:hover {
         background-color: #ddd;
 }
