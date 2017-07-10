@@ -40,6 +40,10 @@ document.getElementById("myInput").addEventListener("keyup", function(event)
         }
     });
 
+String.prototype.trim = function() {
+    return this.replace(/^\s*/,"").replace(/\s*$/,"");
+}
+
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
@@ -47,7 +51,10 @@ function newElement() {
 //  choices.push(inputValue);
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue === '') {
+
+  var trimString = inputValue.trim().length;
+    
+  if (trimString === 0) {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
