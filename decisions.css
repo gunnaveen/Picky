@@ -9,6 +9,7 @@ ul {
     padding: 0;
 }
 
+/*
 ul.tab {
         color: white;
         list-style-type: none;
@@ -31,6 +32,7 @@ ul.tab li a {
         transition: 0.3s;
         font-size: 17px;
 }
+*/
 
 /* Style the list items */
 ul li {
