@@ -13,12 +13,13 @@ for (i = 0; i < myNodelist.length; i++) {
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
+//for (i = 0; i < close.length; i++) {
+//  close[i].onclick = function() {
+//    var temp = i;
+//    var div = this.parentElement;
+//    div.style.display = "none";
+//  }
+//}
 
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
@@ -43,13 +44,14 @@ document.getElementById("myInput").addEventListener("keyup", function(event)
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
-  choices.push(inputValue);
+//  choices.push(inputValue);
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
+    choices.push(inputValue);
   }
   document.getElementById("myInput").value = "";
 
@@ -58,13 +60,15 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-
+    
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
     }
   }
+    
+  
 }
 
 function multFunc()
@@ -82,5 +86,4 @@ function randomize(choices)
     
         var result = choices[Math.floor(Math.random()*choices.length)];
         return result;
-
 }
