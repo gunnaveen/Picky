@@ -13,13 +13,12 @@ for (i = 0; i < myNodelist.length; i++) {
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
 var i;
-//for (i = 0; i < close.length; i++) {
-//  close[i].onclick = function() {
-//    var temp = i;
-//    var div = this.parentElement;
-//    div.style.display = "none";
-//  }
-//}
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
 
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
@@ -28,17 +27,6 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked');
   }
 }, false);
-
-// Treats enter in text box as a button click
-document.getElementById("myInput").addEventListener("keyup", function(event) 
-    {
-        event.preventDefault();
-        if (event.keyCode == 13) 
-        {
-            //document.getElementByClassName("addBtn").click();
-            //newElement();
-        }
-    });
 
 String.prototype.trim = function() {
     return this.replace(/^\s*/,"").replace(/\s*$/,"");
@@ -68,14 +56,13 @@ function newElement() {
   span.appendChild(txt);
   li.appendChild(span);
     
+  // This is where its being accessed when pressing the 'x'
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.style.display = "none";
     }
   }
-    
-  
 }
 
 function multFunc()
@@ -93,4 +80,12 @@ function randomize(choices)
     
         var result = choices[Math.floor(Math.random()*choices.length)];
         return result;
+}
+
+// Not sure if this will be an issue later, but here, the textfield is connected to the function newElement() and not to the button 'Add'
+function handle(e) {
+    var key = e.keyCode || e.which;
+    if (key===13) {
+        newElement();
+    }
 }
