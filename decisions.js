@@ -40,8 +40,10 @@ function newElement() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
 
+// trims the string
   var trimString = inputValue.trim().length;
     
+// checks if the string has actual letters and it's not just white space
   if (trimString === 0) {
     alert("You must write something!");
   } else {
@@ -67,18 +69,18 @@ function newElement() {
 
 function multFunc()
 {
-        document.getElementById("inputs").innerHTML = randomize(choices);
+    document.getElementById("inputs").innerHTML = randomize(choices);
 }
 
 function randomize(choices)
 {
-            
         if(choices.length == 0)
         {
             return "Add some choices first!"
         }
     
         var result = choices[Math.floor(Math.random()*choices.length)];
+    
         return result;
 }
 

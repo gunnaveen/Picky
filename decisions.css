@@ -7,40 +7,18 @@
 ul {
     margin: 0;
     padding: 0;
+    list-style-type: none;
+    background-color: none;
 }
-
-/*
-ul.tab {
-        color: white;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        border: 1px solid #ccc;
-        background-color: white;
-}   
-
-ul.tab li {float: left;}
-
-ul.tab li a {
-
-        display: inline-block;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        transition: 0.3s;
-        font-size: 17px;
-}
-*/
 
 /* Style the list items */
 ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
+    background-color: none;
     font-size: 18px;
+    font: 400 20px/1.7 'Merienda One', Helvetica, sans-serif;
     transition: 0.2s;
 
     /* make the list items unselectable */
@@ -50,24 +28,32 @@ ul li {
     user-select: none;
 }
 
+
 /* Set all odd list items to a different color (zebra-stripes) */
+/*
 ul li:nth-child(odd) {
     background: #f9f9f9;
 }
+*/
+
 
 /* Darker background-color on hover */
 ul li:hover {
     background: #ddd;
 }
 
+
 /* When clicked on, add a background color and strike out text */
+/*//
 ul li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
 }
+*/
 
 /* Add a "checked" mark when clicked on */
+/*//
 ul li.checked::before {
     content: '';
     position: absolute;
@@ -80,7 +66,12 @@ ul li.checked::before {
     height: 15px;
     width: 7px;
 }
+*/
 
+.title {
+    font: 400 50px/1.7 'Merienda One', Helvetica, sans-serif;
+    color: black;
+}
 
 .resultTitle {
         font-family: 'Aldrich';
@@ -112,7 +103,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-    background-color: royalblue; 
+/*    background-color: royalblue; */
     padding: 30px 40px;
     color: white;
     text-align: center;
@@ -127,29 +118,43 @@ ul li.checked::before {
 
 /* Style the input */
 input {
-    border: none;
     width: 75%;
     height: 40px;
     padding: 10px;
-    float: left;
+    float: none;
     font-size: 16px;
+    border: none;
+    border-bottom: deeppink;
 }
 
 /* Style the "Add" button */
 .addBtn {
+    border-radius: 15px;
     padding: 10px;
-    width: 25%;
+    width: 10%;
     height: 40px;
-    background: #d9d9d9;
-    color: #555;
-    float: left;
+    background-color: deeppink;
+    color: white;
+    border: 2px solid deeppink;
+    float: right;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    box-shadow: 0 3px #999;
 }
 
 .addBtn:hover {
-    background-color: #bbb;
+    background-color: white;
+    color: black;
 }
 
+.addBtn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+.instruc {
+    color:black;
+}

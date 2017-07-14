@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+<!--        <script src="shuffle-text.js"></script>-->
+        
         <link rel="stylesheet" href="decisions.css" type="text/css"/>
         
         <link href='//fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
@@ -8,6 +10,8 @@
         <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
         
         <link rel="stylesheet" href="//code.getmdl.io/1.3.0/material.blue-pink.min.css">
+        
+        <link href='//fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
         
         <script defer src="//code.getmdl.io/1.3.0/material.min.js"></script>
 
@@ -21,14 +25,15 @@
 -->
 
         <div id="myDIV" class="header">
-            <h2>MAKE A CHOICE</h2>
-            
+            <h2 class="title">MAKE A CHOICE!</h2>
             
             <input type="text" id="myInput" placeholder="Enter your options here..." onkeypress="handle(event)">
             
             <span onclick="newElement()" class="addBtn">Add</span>
-                
-            <p>Add all your choices, then click the 'PICK FOR ME' button.</p>
+
+            <p class="instruc">Add all your choices, then click the 'PICK FOR ME' button.</p>
+            
+            
         </div>
         
 
@@ -59,6 +64,14 @@
 
         <br>
         
-        <p id="inputs" class = "inputs"></p>
+        <p id="inputs" class="inputs"></p>
+<!--
+        <script>
+            var el = document.getElementById("inputs");
+            var text = new ShuffleText(el);
+            text.start();
+        </script>
+-->
+        
     </body>
 </html>
