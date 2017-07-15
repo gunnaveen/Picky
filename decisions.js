@@ -16,6 +16,8 @@ var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
+    var choice = div.innerHTML;
+    removedChoices.push(choice);
     div.style.display = "none";
   }
 }
@@ -45,7 +47,7 @@ function newElement() {
     
 // checks if the string has actual letters and it's not just white space
   if (trimString === 0) {
-    alert("You must write something!");
+    alert("You must enter some text!");
   } else {
     document.getElementById("myUL").appendChild(li);
     choices.push(inputValue);
@@ -62,7 +64,10 @@ function newElement() {
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
+      var text = div.innerHTML;
+      var choice = text.split('<')[0];
       div.style.display = "none";
+      removeChoice(choice);
     }
   }
 }
@@ -90,4 +95,9 @@ function handle(e) {
     if (key===13) {
         newElement();
     }
+}
+
+function removeChoice(ch) {
+    var index = choices.indexOf(ch);
+    choices.splice(index, 1);
 }
