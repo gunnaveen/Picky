@@ -6,81 +6,30 @@ body {
 } 
 
 
-.makeAChoice {
+.btn {
     border-radius: 15px;
     padding: 10px;
     height: 40px;
     background-color: deeppink;
     color: white;
     border: 2px solid deeppink;
-    float: right;
+    float: center;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 3px #999;
 }
 
-.makeAChoice:hover {
+.btn:hover {
     background-color: white;
     color: black;
 }
 
-.makeAChoice:active {
+.btn:active {
     background-color: royalblue;
     box-shadow: 0 1px #666;
     transform: translateY(4px);
 }
-
-.flipACoin {
-    border-radius: 15px;
-    padding: 10px;
-    height: 40px;
-    background-color: deeppink;
-    color: white;
-    border: 2px solid deeppink;
-    float: right;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 3px #999;
-}
-
-.flipACoin:hover {
-    background-color: white;
-    color: black;
-}
-
-.flipACoin:active {
-    background-color: royalblue;
-    box-shadow: 0 1px #666;
-    transform: translateY(4px);
-}
-
-.rollADie {
-    border-radius: 15px;
-    padding: 10px;
-    height: 40px;
-    background-color: deeppink;
-    color: white;
-    border: 2px solid deeppink;
-    float: right;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 3px #999;
-}
-
-.rollADie:hover {
-    background-color: white;
-    color: black;
-}
-
-.rollADie:active {
-    background-color: royalblue;
-    box-shadow: 0 1px #666;
-    transform: translateY(4px);
-}
-
 
 .Title {
         font: 400 100px/1.7 'Merienda One', Helvetica, sans-serif;
