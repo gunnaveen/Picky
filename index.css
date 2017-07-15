@@ -7,15 +7,78 @@ body {
 
 
 .makeAChoice {
-        width: 50px;
+    border-radius: 15px;
+    padding: 10px;
+    height: 40px;
+    background-color: deeppink;
+    color: white;
+    border: 2px solid deeppink;
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 3px #999;
+}
+
+.makeAChoice:hover {
+    background-color: white;
+    color: black;
+}
+
+.makeAChoice:active {
+    background-color: royalblue;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
 }
 
 .flipACoin {
-        width: 50px;
+    border-radius: 15px;
+    padding: 10px;
+    height: 40px;
+    background-color: deeppink;
+    color: white;
+    border: 2px solid deeppink;
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 3px #999;
 }
 
-.choiceButton {
-        width: 150px;
+.flipACoin:hover {
+    background-color: white;
+    color: black;
+}
+
+.flipACoin:active {
+    background-color: royalblue;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
+}
+
+.rollADie {
+    border-radius: 15px;
+    padding: 10px;
+    height: 40px;
+    background-color: deeppink;
+    color: white;
+    border: 2px solid deeppink;
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 3px #999;
+}
+
+.rollADie:hover {
+    background-color: white;
+    color: black;
+}
+
+.rollADie:active {
+    background-color: royalblue;
+    box-shadow: 0 1px #666;
+    transform: translateY(4px);
 }
 
 
@@ -35,6 +98,10 @@ body {
         font-weight: bold;
         color: darkgreen;
         font-size: 20px;
+}
+
+.divButtons {
+    text-align: center;
 }
 
 /*
