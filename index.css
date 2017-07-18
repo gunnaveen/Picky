@@ -7,6 +7,7 @@ body {
 
 
 .btn {
+    outline: none;
     font: 400 50px/1.7 'Merienda One', Helvetica, sans-serif;
     border-radius: 15px;
     padding: 5px;

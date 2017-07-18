@@ -129,6 +129,7 @@ input {
 
 /* Style the "Add" button */
 .addBtn {
+    outline: none;
     font: 400 50px/1.7 'Merienda One', Helvetica, sans-serif;
     border-radius: 15px;
     padding: 5px;
@@ -156,6 +157,7 @@ input {
 }
 
 .pickBtn {
+    outline: none;
     font: 400 50px/1.7 'Merienda One', Helvetica, sans-serif;
     border-radius: 15px;
     padding: 5px;
