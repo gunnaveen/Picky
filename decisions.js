@@ -104,3 +104,7 @@ function removeChoice(ch) {
     var index = choices.indexOf(ch);
     choices.splice(index, 1);
 }
+
+function backFunc() {
+    window.history.back();
+}
