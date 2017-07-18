@@ -129,14 +129,14 @@ input {
 
 /* Style the "Add" button */
 .addBtn {
+    font: 400 50px/1.7 'Merienda One', Helvetica, sans-serif;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     width: 10%;
     height: 40px;
     background-color: deeppink;
     color: white;
     border: 2px solid deeppink;
-    float: right;
     text-align: center;
     font-size: 16px;
     cursor: pointer;
@@ -156,8 +156,9 @@ input {
 }
 
 .pickBtn {
+    font: 400 50px/1.7 'Merienda One', Helvetica, sans-serif;
     border-radius: 15px;
-    padding: 10px;
+    padding: 5px;
     height: 40px;
     background-color: deeppink;
     color: white;
