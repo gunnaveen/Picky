@@ -30,6 +30,7 @@ for (i = 0; i < close.length; i++) {
 //  }
 //}, false);
 
+// function that removes all white spaces
 String.prototype.trim = function() {
     return this.replace(/^\s*/,"").replace(/\s*$/,"");
 }
@@ -47,7 +48,7 @@ function newElement() {
     
 // checks if the string has actual letters and it's not just white space
   if (trimString === 0) {
-    alert("You must enter some text!");
+    //alert("You must enter some text!");
   } else {
     document.getElementById("myUL").appendChild(li);
     choices.push(inputValue);
@@ -80,6 +81,7 @@ function multFunc()
     text.start();
 }
 
+// takes the choices array and returns a random choice
 function randomize(choices)
 {
         if(choices.length == 0)
@@ -100,7 +102,14 @@ function handle(e) {
     }
 }
 
+// removes an elements from choices when user removes it from the list
 function removeChoice(ch) {
     var index = choices.indexOf(ch);
     choices.splice(index, 1);
+}
+
+// back button is connected to home page
+function backFunc() {
+    //location.href = "http://127.0.0.1:50679/index.html";
+    window.history.back();
 }
