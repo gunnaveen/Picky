@@ -86,6 +86,7 @@ ul li.checked::before {
         font-size: 50px;
         text-align: center;
         font-family: 'Lobster', cursive;
+        max-width: 100%;
 }
 
 /* Style the close button */
