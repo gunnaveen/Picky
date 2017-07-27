@@ -81,7 +81,7 @@ ul li.checked::before {
         text-align: center;
 }
 
-.inputs {
+.result {
         color: black;
         font-size: 50px;
         text-align: center;
@@ -118,6 +118,7 @@ ul li.checked::before {
 
 /* Style the input */
 input {
+    margin-top: 50px;
     width: 75%;
     height: 40px;
     padding: 10px;
@@ -132,7 +133,9 @@ input {
     outline: none;
     font: 400 50px/1.7 'Merienda One', Helvetica, sans-serif;
     border-radius: 15px;
-    padding: 5px;
+    padding: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 10%;
     height: 40px;
     background-color: deeppink;
@@ -194,7 +197,6 @@ input {
     background-color: deeppink;
     color: white;
     border: 2px solid deeppink;
-    float: left;
     text-align: center;
     font-size: 16px;
     cursor: pointer;

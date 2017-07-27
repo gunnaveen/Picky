@@ -34,7 +34,11 @@ body {
 }
 
 .Title {
-        font: 400 100px/1.7 'Merienda One', Helvetica, sans-serif;
+        font: 400 75px/1.7 'Merienda One', Helvetica, sans-serif;
+/*
+        font-family: cursive;
+        font-size: 75px;
+*/
         color: black;
 }
 

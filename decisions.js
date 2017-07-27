@@ -75,8 +75,8 @@ function newElement() {
 
 function multFunc()
 {
-    document.getElementById("inputs").innerHTML = randomize(choices);
-    var el = document.getElementById("inputs");
+    document.getElementById("result").innerHTML = randomize(choices);
+    var el = document.getElementById("result");
     var text = new ShuffleText(el);
     text.start();
 }

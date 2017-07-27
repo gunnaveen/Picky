@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <head>        
+    <head>
+        
+        <meta name=viewport content='width=300'>
+        
         <link rel="stylesheet" href="decisions.css" type="text/css"/>
         
         <link href='//fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
@@ -21,15 +24,14 @@
         
 
         <div id="myDIV" class="header">
-            <button class="backBtn" onclick="backFunc()">BACK</button>
             
-            <h2 class="title">MAKE A CHOICE!</h2>
+<!--            <h2 class="title">MAKE A CHOICE!</h2>-->
             
             <input type="text" id="myInput" placeholder="Enter your options here..." onkeypress="handle(event)">
             
             <span onclick="newElement()" class="addBtn">Add</span>
 
-            <p class="instruc">Add all your choices, then click the 'PICK FOR ME' button.</p>
+            <p class="instruc">Add choices and click "PICK FOR ME"</p>
         </div>
         
 
@@ -49,16 +51,18 @@
     <body>
         
         <div style= "text-align:center">
+            
             <button class="pickBtn" onclick="multFunc()">PICK FOR ME</button>
+            
+            <button class="backBtn" onclick="backFunc()">BACK</button>
+
         </div>
 
         <br>
         
         <p class = "resultTitle"> RESULT </p>
-
-        <br>
         
-        <p id="inputs" class="inputs"></p>
+        <p id="result" class="result"></p>
         
     </body>
 </html>
