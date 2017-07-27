@@ -86,7 +86,7 @@ function randomize(choices)
 {
         if(choices.length == 0)
         {
-            return "Add some choices first!"
+            return "No choices found!"
         }
     
         var result = choices[Math.floor(Math.random()*choices.length)];
