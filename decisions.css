@@ -118,8 +118,10 @@ ul li.checked::before {
 
 /* Style the input */
 input {
+    outline: none;
     margin-top: 50px;
     border-radius: 15px;
+    margin-right: 15px;
     width: 75%;
     height: 40px;
     padding: 10px;
@@ -134,7 +136,7 @@ input {
     outline: none;
     font: 400 50px/1.7 'Merienda One', Helvetica, sans-serif;
     border-radius: 15px;
-    padding: 6px;
+    padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
     width: 10%;
